@@ -21,6 +21,8 @@ mongoose.connect(db,{useNewUrlParser: true})
 app.use(expressLayouts);
 app.set('view engine','ejs');
 
+//BodyParser
+app.use(express.urlencoded({extended: false}));
 
 const PORT = process.env.PORT || 5000;
 
